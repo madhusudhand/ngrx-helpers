@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "ngrx-helpers": {
+      "root": "projects/ngrx-helpers",
+      "sourceRoot": "projects/ngrx-helpers/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngrx-helpers/tsconfig.lib.json",
+            "project": "projects/ngrx-helpers/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngrx-helpers/src/test.ts",
+            "tsConfig": "projects/ngrx-helpers/tsconfig.spec.json",
+            "karmaConfig": "projects/ngrx-helpers/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngrx-helpers/tsconfig.lib.json",
+              "projects/ngrx-helpers/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngrx-helpers-app"
