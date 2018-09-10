@@ -9,7 +9,7 @@ import { NgrxSubscription } from 'projects/ngrx-helpers/src/store/ngrx-subscript
   styleUrls: ['./app.component.css']
 })
 export class AppComponent extends NgrxSubscription implements OnInit {
-  title = 'ngrx-helpers-app';
+  title = 'ngrx-helpers-demo';
   userInfo = {};
 
   constructor(
@@ -24,8 +24,7 @@ export class AppComponent extends NgrxSubscription implements OnInit {
       reducer: 'USER_REDUCER',
       state: 'userInfo',
     }).subscribe((data) => {
-      // this.userInfo = data;
-      console.log(data);
+      this.userInfo = data;
     });
 
     this.store.dispatch({
