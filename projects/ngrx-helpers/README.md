@@ -1,4 +1,4 @@
-# ngrx helpers
+# ngrx-helpers
 
 A library to simplify ngrx implementation in Angular Apps.
 
