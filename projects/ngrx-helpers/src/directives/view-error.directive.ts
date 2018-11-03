@@ -1,9 +1,9 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[ngViewError]'
+  selector: '[ngrxViewError]'
 })
-export class NgViewErrorDirective {
+export class NgrxViewErrorDirective {
   private _hasView = false;
   constructor(
     private viewRef: ViewContainerRef,

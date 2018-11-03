@@ -1,10 +1,9 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import { fakeAsync } from '@angular/core/testing';
 
 @Directive({
-  selector: '[ngViewResolved]'
+  selector: '[ngrxViewResolved]'
 })
-export class NgViewResolvedDirective {
+export class NgrxViewResolvedDirective {
   private _hasView = false;
   constructor(
     private viewRef: ViewContainerRef,

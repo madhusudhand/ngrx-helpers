@@ -1,9 +1,9 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[ngViewResolving]'
+  selector: '[ngrxViewResolving]'
 })
-export class NgViewResolvingDirective {
+export class NgrxViewResolvingDirective {
   private _hasView = false;
   constructor(
     private viewRef: ViewContainerRef,

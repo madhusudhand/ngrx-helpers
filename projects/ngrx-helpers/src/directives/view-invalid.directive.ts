@@ -1,9 +1,9 @@
 import {Directive, Input, TemplateRef, ViewContainerRef} from '@angular/core';
 
 @Directive({
-  selector: '[ngViewInvalid]'
+  selector: '[ngrxViewInvalid]'
 })
-export class NgViewInvalidDirective {
+export class NgrxViewInvalidDirective {
   private _hasView = false;
   constructor(
     private viewRef: ViewContainerRef,

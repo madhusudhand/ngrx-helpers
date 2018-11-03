@@ -1,9 +1,9 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[ngViewEmpty]'
+  selector: '[ngrxViewEmpty]'
 })
-export class NgViewEmptyDirective {
+export class NgrxViewEmptyDirective {
   private _hasView = false;
   constructor(
     private viewRef: ViewContainerRef,

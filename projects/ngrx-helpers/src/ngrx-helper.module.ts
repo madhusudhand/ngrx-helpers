@@ -1,32 +1,32 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { HELPER_CONFIG } from './tokens';
 import { NgrxHelperService } from './ngrx-helper.service';
-import { NgViewDirective } from './directives/view.directive';
-import { NgViewResolvingDirective } from './directives/view-resolving.directive';
-import { NgViewResolvedDirective } from './directives/view-resolved.directive';
-import { NgViewErrorDirective } from './directives/view-error.directive';
-import { NgViewEmptyDirective } from './directives/view-empty.directive';
-import { NgViewInvalidDirective } from './directives/view-invalid.directive';
+import { NgrxViewDirective } from './directives/view.directive';
+import { NgrxViewResolvingDirective } from './directives/view-resolving.directive';
+import { NgrxViewResolvedDirective } from './directives/view-resolved.directive';
+import { NgrxViewErrorDirective } from './directives/view-error.directive';
+import { NgrxViewEmptyDirective } from './directives/view-empty.directive';
+import { NgrxViewInvalidDirective } from './directives/view-invalid.directive';
 
 @NgModule({
   // imports: [,
     // HttpClientModule,
   // ],
   declarations: [
-    NgViewDirective,
-    NgViewResolvingDirective,
-    NgViewResolvedDirective,
-    NgViewErrorDirective,
-    NgViewEmptyDirective,
-    NgViewInvalidDirective,
+    NgrxViewDirective,
+    NgrxViewResolvingDirective,
+    NgrxViewResolvedDirective,
+    NgrxViewErrorDirective,
+    NgrxViewEmptyDirective,
+    NgrxViewInvalidDirective,
   ],
   exports: [
-    NgViewDirective,
-    NgViewResolvingDirective,
-    NgViewResolvedDirective,
-    NgViewErrorDirective,
-    NgViewEmptyDirective,
-    NgViewInvalidDirective,
+    NgrxViewDirective,
+    NgrxViewResolvingDirective,
+    NgrxViewResolvedDirective,
+    NgrxViewErrorDirective,
+    NgrxViewEmptyDirective,
+    NgrxViewInvalidDirective,
   ],
 })
 export class NgrxHelperModule {

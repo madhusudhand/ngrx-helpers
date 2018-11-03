@@ -1,20 +1,20 @@
 import { ContentChildren, Directive, Input, QueryList, AfterViewInit } from '@angular/core';
 import { VIEW_STATE } from '../enums/view-state.enum';
-import { NgViewResolvingDirective } from './view-resolving.directive';
-import { NgViewResolvedDirective } from './view-resolved.directive';
-import { NgViewErrorDirective } from './view-error.directive';
-import { NgViewEmptyDirective } from './view-empty.directive';
-import { NgViewInvalidDirective } from './view-invalid.directive';
+import { NgrxViewResolvingDirective } from './view-resolving.directive';
+import { NgrxViewResolvedDirective } from './view-resolved.directive';
+import { NgrxViewErrorDirective } from './view-error.directive';
+import { NgrxViewEmptyDirective } from './view-empty.directive';
+import { NgrxViewInvalidDirective } from './view-invalid.directive';
 
 @Directive({
-  selector: '[ngView]'
+  selector: '[ngrxView]'
 })
-export class NgViewDirective implements AfterViewInit {
-  @ContentChildren(NgViewResolvingDirective) resolving: QueryList<NgViewResolvingDirective>;
-  @ContentChildren(NgViewErrorDirective) error: QueryList<NgViewErrorDirective>;
-  @ContentChildren(NgViewResolvedDirective) resolved: QueryList<NgViewResolvedDirective>;
-  @ContentChildren(NgViewEmptyDirective) empty: QueryList<NgViewEmptyDirective>;
-  @ContentChildren(NgViewInvalidDirective) invalid: QueryList<NgViewInvalidDirective>;
+export class NgrxViewDirective implements AfterViewInit {
+  @ContentChildren(NgrxViewResolvingDirective) resolving: QueryList<NgrxViewResolvingDirective>;
+  @ContentChildren(NgrxViewErrorDirective) error: QueryList<NgrxViewErrorDirective>;
+  @ContentChildren(NgrxViewResolvedDirective) resolved: QueryList<NgrxViewResolvedDirective>;
+  @ContentChildren(NgrxViewEmptyDirective) empty: QueryList<NgrxViewEmptyDirective>;
+  @ContentChildren(NgrxViewInvalidDirective) invalid: QueryList<NgrxViewInvalidDirective>;
 
   constructor() { }
 
