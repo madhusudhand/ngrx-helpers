@@ -19,7 +19,7 @@ export class AppComponent extends NgrxSubscription implements OnInit {
   }
 
   ngOnInit() {
-    this.getState({
+    super.getState({
       feature: 'APP',
       reducer: 'USER_REDUCER',
       state: 'userInfo',
@@ -28,7 +28,11 @@ export class AppComponent extends NgrxSubscription implements OnInit {
     });
 
     this.store.dispatch({
-      type: APP_ACTIONS.GET_USER
+      type: APP_ACTIONS.GET_USER,
+      payload: {
+        pathParams: ['octocat'],
+        // queryParams: [{ name: 'value' }],
+      },
     });
   }
 }

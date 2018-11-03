@@ -1,6 +1,22 @@
 {
   "name": "ngrx-helpers",
+  "description": "A library to simplify ngrx implementation in Angular Apps",
   "version": "0.0.1",
+  "author": "Madhusudhana Dollu <madhusudhan.dollu@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhusudhand/ngrx-helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/madhusudhand/ngrx-helpers/issues"
+  },
+  "homepage": "https://github.com/madhusudhand/ngrx-helpers#readme",
+  "keywords": [
+    "ngrx",
+    "angular",
+    "rxjs"
+  ],
   "peerDependencies": {
     "@angular/common": "^6.0.0",
     "@angular/core": "^6.0.0",

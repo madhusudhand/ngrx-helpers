@@ -8,7 +8,7 @@ import * as fromRouter from '@ngrx/router-store';
 import { appReducers } from './_store/app.reducers';
 import { appEffects } from './_store/app.effects';
 import { EffectsModule } from '@ngrx/effects';
-import { NgrxHelperModule } from 'projects/ngrx-helpers/src/ngrx-helper.module';
+import { NgrxHelperModule } from 'ngrx-helpers';
 import { HttpClientModule } from '@angular/common/http';
 
 const rootReducers: ActionReducerMap<any> = {
@@ -26,7 +26,7 @@ const rootReducers: ActionReducerMap<any> = {
     StoreModule.forRoot(rootReducers, {}),
     StoreModule.forFeature('APP', appReducers),
     EffectsModule.forRoot(appEffects),
-    NgrxHelperModule.forRoot({ some: 'config' }),
+    NgrxHelperModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

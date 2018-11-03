@@ -11,7 +11,7 @@ export class NgrxViewInvalidDirective {
   ) { }
 
   @Input()
-  set ngViewInvalid(condition) {
+  set ngrxViewInvalid(condition) {
     if (!this.viewRef) {
       return;
     }

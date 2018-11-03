@@ -11,7 +11,7 @@ export class NgrxViewErrorDirective {
   ) { }
 
   @Input()
-  set ngViewError(condition) {
+  set ngrxViewError(condition) {
     if (!this.viewRef) {
       return;
     }

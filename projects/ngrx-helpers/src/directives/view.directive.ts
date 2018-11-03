@@ -21,7 +21,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private viewState: VIEW_STATE = VIEW_STATE.INITIAL;
 
   @Input()
-  set ngView(viewState) {
+  set ngrxView(viewState) {
     this.viewState = viewState;
     this.setViewState();
   }
@@ -43,7 +43,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setResolving(viewState) {
     if (this.resolving) {
       this.resolving.forEach(l => {
-        l.ngViewResolving = viewState === VIEW_STATE.RESOLVING;
+        l.ngrxViewResolving = viewState === VIEW_STATE.RESOLVING;
       });
     }
   }
@@ -51,7 +51,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setError(viewState) {
     if (this.error) {
       this.error.forEach(e => {
-        e.ngViewError = viewState === VIEW_STATE.ERROR;
+        e.ngrxViewError = viewState === VIEW_STATE.ERROR;
       });
     }
   }
@@ -59,7 +59,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setResolved(viewState) {
     if (this.resolved) {
       this.resolved.forEach(c => {
-        c.ngViewResolved = viewState === VIEW_STATE.RESOLVED;
+        c.ngrxViewResolved = viewState === VIEW_STATE.RESOLVED;
       });
     }
   }
@@ -67,7 +67,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setEmpty(viewState) {
     if (this.empty) {
       this.empty.forEach(f => {
-        f.ngViewEmpty = viewState === VIEW_STATE.EMPTY;
+        f.ngrxViewEmpty = viewState === VIEW_STATE.EMPTY;
       });
     }
   }
@@ -75,7 +75,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setInvalid(viewState) {
     if (this.invalid) {
       this.invalid.forEach(f => {
-        f.ngViewInvalid = viewState === VIEW_STATE.INVALID;
+        f.ngrxViewInvalid = viewState === VIEW_STATE.INVALID;
       });
     }
   }

@@ -11,7 +11,7 @@ export class NgrxViewResolvingDirective {
   ) { }
 
   @Input()
-  set ngViewResolving(condition) {
+  set ngrxViewResolving(condition) {
     if (!this.viewRef) {
       return;
     }

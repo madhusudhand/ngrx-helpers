@@ -150,3 +150,10 @@ When the action *GET_USER* gets dispatched
   * which will set the `view` in store to 'RESOLVED'
   * the component will render ***ngrxViewResolved**. (appropriate UI for user data)
 
+
+
+## LICENSE
+
+[MIT]
+
+[MIT]: <https://github.com/madhusudhand/ngrx-helpers/blob/master/LICENSE>

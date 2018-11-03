@@ -3,17 +3,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CustomAction } from './custom-action';
 import { of, merge } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import { EffectConfig } from '../enums/effect-config.enum';
+import { NgrxEffectConfig } from '../enums/effect-config.enum';
 import { HttpMethod } from '../enums/http-method.enum';
 
-export abstract class RootEffect {
+export abstract class NgrxEffect {
 
   constructor(
     protected action$: Actions,
     protected httpClient: HttpClient,
   ) { }
 
-  public effect(effectConfig: EffectConfig) {
+  public effect(effectConfig: NgrxEffectConfig) {
     return this.action$
       .ofType(effectConfig.action) // tslint:disable-line
       .pipe(

@@ -11,7 +11,7 @@ export class NgrxViewEmptyDirective {
   ) { }
 
   @Input()
-  set ngViewEmpty(condition) {
+  set ngrxViewEmpty(condition) {
     if (!this.viewRef) {
       return;
     }

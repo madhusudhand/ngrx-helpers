@@ -12,7 +12,7 @@ export class NgrxViewResolvedDirective {
   ) { }
 
   @Input()
-  set ngViewResolved(condition) {
+  set ngrxViewResolved(condition) {
     if (!this.viewRef) {
       return;
     }
