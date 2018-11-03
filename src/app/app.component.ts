@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { APP_ACTIONS } from './_store/actions';
-import { NgrxSubscription } from 'projects/ngrx-helpers/src/store/ngrx-subscription';
+import { NgrxSubscription } from 'ngrx-helpers';
 
 @Component({
   selector: 'app-root',

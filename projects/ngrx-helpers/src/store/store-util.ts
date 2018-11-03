@@ -1,5 +1,5 @@
 import { VIEW_STATE } from '../enums/view-state.enum';
-import * as merge from 'lodash.merge';
+import merge from 'lodash.merge';
 
 export const StoreUtil = {
   setResolving(state: any, key: string, payload: any) {

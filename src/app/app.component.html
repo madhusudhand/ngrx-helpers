@@ -7,14 +7,14 @@
 
 <h4>Github user (octocat) info</h4>
 
-<div [ngView]="userInfo.view">
-  <div *ngViewResolving>
+<div [ngrxView]="userInfo.view">
+  <div *ngrxViewResolving>
     Loading user data...
   </div>
-  <div *ngViewResolved>
+  <div *ngrxViewResolved>
     {{userInfo.data | json}}
   </div>
-  <div *ngViewError>
+  <div *ngrxViewError>
     Error fetching user info
   </div>
 </div>

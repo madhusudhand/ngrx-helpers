@@ -1,7 +1,5 @@
 import { APP_ACTIONS } from '../actions';
-import { NgrxObject } from 'projects/ngrx-helpers/src/store/types';
-import { VIEW_STATE } from 'projects/ngrx-helpers/src/enums/view-state.enum';
-import { StoreUtil } from 'projects/ngrx-helpers/src/store/store-util';
+import { StoreUtil, VIEW_STATE, NgrxObject } from 'ngrx-helpers';
 
 export interface UserState {
   readonly userInfo: NgrxObject<any>;
