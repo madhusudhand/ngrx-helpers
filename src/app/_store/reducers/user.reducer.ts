@@ -1,5 +1,5 @@
 import { APP_ACTIONS } from '../actions';
-import { StoreUtil, VIEW_STATE, NgrxObject } from 'ngrx-helpers';
+import { StoreUtil, DATA_STATE, NgrxObject } from 'ngrx-helpers';
 
 export interface UserState {
   readonly userInfo: NgrxObject<any>;
@@ -7,7 +7,7 @@ export interface UserState {
 
 const defaultState: UserState = {
   userInfo: {
-    view: VIEW_STATE.INITIAL,
+    state: DATA_STATE.INITIAL,
     data: null
   },
 };
