@@ -1,7 +1,7 @@
 import { Actions } from '@ngrx/effects';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CustomAction } from './custom-action';
-import { of, merge } from 'rxjs';
+import { of, merge, Observable } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import { NgrxEffectConfig } from '../enums/effect-config.enum';
 import { HttpMethod } from '../enums/http-method.enum';
@@ -13,7 +13,7 @@ export abstract class NgrxEffect {
     protected httpClient: HttpClient,
   ) { }
 
-  public effect(effectConfig: NgrxEffectConfig) {
+  public effect(effectConfig: NgrxEffectConfig): Observable<any> {
     return this.action$
       .ofType(effectConfig.action) // tslint:disable-line
       .pipe(

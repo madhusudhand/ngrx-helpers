@@ -10,4 +10,4 @@ export * from './store/store-util';
 export * from './store/types';
 export * from './enums/effect-config.enum';
 export * from './enums/http-method.enum';
-export * from './enums/view-state.enum';
+export * from './enums/data-state.enum';

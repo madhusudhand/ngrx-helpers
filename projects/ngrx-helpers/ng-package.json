@@ -3,5 +3,6 @@
   "dest": "../../dist/ngrx-helpers",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["lodash.merge"]
 }

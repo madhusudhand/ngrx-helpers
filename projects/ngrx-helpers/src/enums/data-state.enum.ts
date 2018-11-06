@@ -1,4 +1,4 @@
-export enum VIEW_STATE {
+export enum DATA_STATE {
   INITIAL = 'INITIAL',
   RESOLVING = 'RESOLVING',
   RESOLVED = 'RESOLVED',

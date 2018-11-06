@@ -1,7 +1,7 @@
-import { VIEW_STATE } from '../enums/view-state.enum';
+import { DATA_STATE } from '../enums/data-state.enum';
 
 export interface NgrxAny {
-  view: VIEW_STATE;
+  state: DATA_STATE;
   data: any;
   error?: any;
 }

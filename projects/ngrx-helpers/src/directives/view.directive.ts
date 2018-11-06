@@ -1,5 +1,5 @@
 import { ContentChildren, Directive, Input, QueryList, AfterViewInit } from '@angular/core';
-import { VIEW_STATE } from '../enums/view-state.enum';
+import { DATA_STATE } from '../enums/data-state.enum';
 import { NgrxViewResolvingDirective } from './view-resolving.directive';
 import { NgrxViewResolvedDirective } from './view-resolved.directive';
 import { NgrxViewErrorDirective } from './view-error.directive';
@@ -18,7 +18,7 @@ export class NgrxViewDirective implements AfterViewInit {
 
   constructor() { }
 
-  private viewState: VIEW_STATE = VIEW_STATE.INITIAL;
+  private viewState: DATA_STATE = DATA_STATE.INITIAL;
 
   @Input()
   set ngrxView(viewState) {
@@ -43,7 +43,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setResolving(viewState) {
     if (this.resolving) {
       this.resolving.forEach(l => {
-        l.ngrxViewResolving = viewState === VIEW_STATE.RESOLVING;
+        l.ngrxViewResolving = viewState === DATA_STATE.RESOLVING;
       });
     }
   }
@@ -51,7 +51,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setError(viewState) {
     if (this.error) {
       this.error.forEach(e => {
-        e.ngrxViewError = viewState === VIEW_STATE.ERROR;
+        e.ngrxViewError = viewState === DATA_STATE.ERROR;
       });
     }
   }
@@ -59,7 +59,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setResolved(viewState) {
     if (this.resolved) {
       this.resolved.forEach(c => {
-        c.ngrxViewResolved = viewState === VIEW_STATE.RESOLVED;
+        c.ngrxViewResolved = viewState === DATA_STATE.RESOLVED;
       });
     }
   }
@@ -67,7 +67,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setEmpty(viewState) {
     if (this.empty) {
       this.empty.forEach(f => {
-        f.ngrxViewEmpty = viewState === VIEW_STATE.EMPTY;
+        f.ngrxViewEmpty = viewState === DATA_STATE.EMPTY;
       });
     }
   }
@@ -75,7 +75,7 @@ export class NgrxViewDirective implements AfterViewInit {
   private setInvalid(viewState) {
     if (this.invalid) {
       this.invalid.forEach(f => {
-        f.ngrxViewInvalid = viewState === VIEW_STATE.INVALID;
+        f.ngrxViewInvalid = viewState === DATA_STATE.INVALID;
       });
     }
   }
