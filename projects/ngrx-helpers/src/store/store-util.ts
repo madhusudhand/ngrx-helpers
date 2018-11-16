@@ -1,5 +1,5 @@
 import { DATA_STATE } from '../enums/data-state.enum';
-import merge from 'lodash.merge';
+import clonedeep from 'lodash.clonedeep';
 
 export const StoreUtil = {
   setResolving(state: any, key: string, payload: any) {
@@ -17,7 +17,7 @@ export const StoreUtil = {
   setResolved(state: any, key: string, payload: any) {
     const newSubState = Object.assign({}, state[key], {
       state: DATA_STATE.RESOLVED,
-      data: merge({}, state[key].data, payload),
+      data: clonedeep(payload),
       message: '',
     });
 
