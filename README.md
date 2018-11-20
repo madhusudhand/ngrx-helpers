@@ -12,7 +12,7 @@ import `NgrxHelperModule.forRoot()` in app.module along with other ngrx modules.
 
 ### Effects
 
-The helper class `RootEffect` simplifies the effect configuration.
+The helper class `NgrxEffect` simplifies the effect configuration.
 It lets you configure effects with minimal inputs such as action, endpint and http method.
 
 ```ts
