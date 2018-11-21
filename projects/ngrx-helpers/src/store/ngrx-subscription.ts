@@ -7,7 +7,7 @@ export interface SubscriptionInput {
   state?: string;
 }
 
-export class NgrxSubscription {
+export class NgrxStoreSubscription {
   constructor(private _store: Store<any>) {}
 
   getState(input: SubscriptionInput): Observable<any> {

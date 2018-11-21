@@ -87,10 +87,10 @@ this.store.dispatch({
 
 ### Subscribe a state
 
-Subscriptions are simplified by extending the component from the helper class `NgrxSubscription`.
+Subscriptions are simplified by extending the component from the helper class `NgrxStoreSubscription`.
 
 ```ts
-export class AppComponent extends NgrxSubscription implements OnInit {
+export class AppComponent extends NgrxStoreSubscription implements OnInit {
   userInfo = {};
 
   constructor(private store: Store<any>) {

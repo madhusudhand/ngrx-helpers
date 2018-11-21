@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { APP_ACTIONS } from './_store/actions';
-import { NgrxSubscription } from 'ngrx-helpers';
+import { NgrxStoreSubscription } from 'ngrx-helpers';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent extends NgrxSubscription implements OnInit {
+export class AppComponent extends NgrxStoreSubscription implements OnInit {
   title = 'ngrx-helpers-demo';
   userInfo = {};
 
