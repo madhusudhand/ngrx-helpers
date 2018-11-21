@@ -11,10 +11,10 @@
   <div *ngrxViewResolving>
     Loading user data...
   </div>
-  <div *ngrxViewResolved>
-    {{userInfo.data | json}}
-  </div>
   <div *ngrxViewError>
     Error fetching user info
+  </div>
+  <div *ngrxViewResolved>
+    {{userInfo.data | json}}
   </div>
 </div>

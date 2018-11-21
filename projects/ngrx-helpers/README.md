@@ -12,7 +12,7 @@ import `NgrxHelperModule.forRoot()` in app.module along with other ngrx modules.
 
 ### Effects
 
-The helper class `RootEffect` simplifies the effect configuration.
+The helper class `NgrxEffect` simplifies the effect configuration.
 It lets you configure effects with minimal inputs such as action, endpint and http method.
 
 ```ts
@@ -87,10 +87,10 @@ this.store.dispatch({
 
 ### Subscribe a state
 
-Subscriptions are simplified by extending the component from the helper class `NgrxSubscription`.
+Subscriptions are simplified by extending the component from the helper class `NgrxStoreSubscription`.
 
 ```ts
-export class AppComponent extends NgrxSubscription implements OnInit {
+export class AppComponent extends NgrxStoreSubscription implements OnInit {
   userInfo = {};
 
   constructor(private store: Store<any>) {
