@@ -1,4 +1,4 @@
-import { Actions } from '@ngrx/effects';
+import { Actions, ofType } from '@ngrx/effects';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CustomAction } from './custom-action';
 import { of, merge, Observable } from 'rxjs';
@@ -15,7 +15,7 @@ export abstract class NgrxEffect {
 
   public effect(effectConfig: NgrxEffectConfig): Observable<any> {
     return this.action$
-      .ofType(effectConfig.action) // tslint:disable-line
+      .pipe(ofType(effectConfig.action))
       .pipe(
         switchMap((action: CustomAction) => {
           return merge(
@@ -71,7 +71,7 @@ export abstract class NgrxEffect {
     if (typeof endpoint !== 'string' || !Array.isArray(pathParams)) {
       return endpoint;
     }
-    return endpoint.replace(/({\d})/g, function(i) {
+    return endpoint.replace(/({\d})/g, function (i) {
       return pathParams[i.replace(/{/, '').replace(/}/, '')];
     });
   }
