@@ -15,8 +15,8 @@ export abstract class NgrxEffect {
 
   public effect(effectConfig: NgrxEffectConfig): Observable<any> {
     return this.action$
-      .pipe(ofType(effectConfig.action))
       .pipe(
+        ofType(effectConfig.action),
         switchMap((action: CustomAction) => {
           return merge(
             of({
