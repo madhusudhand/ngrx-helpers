@@ -35,11 +35,9 @@ export abstract class NgrxEffect {
     const params: any = action.payload && action.payload.queryParams;
 
     const body = action.payload && action.payload.body;
+    const headers = Object.assign({}, effectConfig.requestHeaders, action.payload && action.payload.requestHeaders);
+    const requestHeaders: HttpHeaders = new HttpHeaders(headers);
     let httpReqParams;
-    let requestHeaders: HttpHeaders;
-    if (effectConfig.requestHeaders) {
-      requestHeaders = new HttpHeaders(effectConfig.requestHeaders);
-    }
     if (effectConfig.type === HttpMethod.GET) {
       httpReqParams = [endpoint, { params, headers: requestHeaders }];
     } else {
