@@ -1,5 +1,6 @@
+<app-header [menuItems]="menu"></app-header>
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -15,6 +16,7 @@
     Error fetching user info
   </div>
   <div *ngrxViewResolved>
-    {{userInfo.data | json}}
+    <pre>{{userInfo.data | json}}</pre>
   </div>
-</div>
+</div> -->
+<router-outlet></router-outlet>

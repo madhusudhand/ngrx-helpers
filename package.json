@@ -23,8 +23,11 @@
     "@ngrx/effects": "^6.1.1",
     "@ngrx/router-store": "^6.1.1",
     "@ngrx/store": "^6.1.1",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "highlight.js": "^9.15.9",
     "lodash.clonedeep": "~4.5.0",
+    "ngx-highlightjs": "^3.0.3",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },

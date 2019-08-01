@@ -6,11 +6,21 @@ import { NgrxStoreSubscription } from 'ngrx-helpers';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent extends NgrxStoreSubscription implements OnInit {
   title = 'ngrx-helpers-demo';
   userInfo = {};
+
+ menu = [
+    {
+        name: 'Documentation',
+    },
+    {
+        name: 'Demos',
+    }
+];
+
 
   constructor(
     private store: Store<any>,
