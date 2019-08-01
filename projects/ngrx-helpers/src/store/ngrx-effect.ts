@@ -1,4 +1,4 @@
-import { Actions } from '@ngrx/effects';
+import { Actions, ofType } from '@ngrx/effects';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CustomAction } from './custom-action';
 import { of, merge, Observable } from 'rxjs';
@@ -15,8 +15,8 @@ export abstract class NgrxEffect {
 
   public effect(effectConfig: NgrxEffectConfig): Observable<any> {
     return this.action$
-      .ofType(effectConfig.action) // tslint:disable-line
       .pipe(
+        ofType(effectConfig.action),
         switchMap((action: CustomAction) => {
           return merge(
             of({
@@ -35,11 +35,9 @@ export abstract class NgrxEffect {
     const params: any = action.payload && action.payload.queryParams;
 
     const body = action.payload && action.payload.body;
+    const headers = Object.assign({}, effectConfig.requestHeaders, action.payload && action.payload.requestHeaders);
+    const requestHeaders: HttpHeaders = new HttpHeaders(headers);
     let httpReqParams;
-    let requestHeaders: HttpHeaders;
-    if (effectConfig.requestHeaders) {
-      requestHeaders = new HttpHeaders(effectConfig.requestHeaders);
-    }
     if (effectConfig.type === HttpMethod.GET) {
       httpReqParams = [endpoint, { params, headers: requestHeaders }];
     } else {
@@ -71,7 +69,7 @@ export abstract class NgrxEffect {
     if (typeof endpoint !== 'string' || !Array.isArray(pathParams)) {
       return endpoint;
     }
-    return endpoint.replace(/({\d})/g, function(i) {
+    return endpoint.replace(/({\d})/g, function (i) {
       return pathParams[i.replace(/{/, '').replace(/}/, '')];
     });
   }

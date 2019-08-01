@@ -1,9 +1,10 @@
 {
   "name": "ngrx-helpers",
   "description": "A library to simplify ngrx implementation in Angular Apps",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "author": "Madhusudhana Dollu <madhusudhan.dollu@gmail.com>",
   "license": "MIT",
+  "main": "src/public_api.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/madhusudhand/ngrx-helpers.git"
