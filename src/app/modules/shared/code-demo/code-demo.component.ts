@@ -15,7 +15,7 @@ export class CodeDemoComponent implements OnInit {
 
   ngOnInit() {
     this.tabs = Object.keys(this.demoCode);
-    this.selectTab(this.tabs[0]);
+    this.selectTab('PREVIEW');
   }
 
   selectTab(tab) {

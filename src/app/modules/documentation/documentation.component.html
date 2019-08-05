@@ -40,26 +40,26 @@
   <h3><b>Summary</b></h3>
   <p>When the action <i>GET_USER</i> gets dispatched</p>
   <ul class="summary-list">
-    <li>it emits GET_USER_RESOLVING 
+    <li>it emits <b>GET_USER_RESOLVING</b>
       
       <ul>
         <li>which will set the state in store to 'RESOLVING'</li>
-        <li>the component will render *ngrxViewResolving. (a loader screen)</li>
+        <li>the component will render <b>*ngrxViewResolving</b>. (a loader screen)</li>
       </ul>
       </li>
     <li>
-    if api call fails, it emits GET_USER_ERROR
+    if api call fails, it emits <b>GET_USER_ERROR</b>
       
       <ul>
         <li>which will set the state in store to 'ERROR'</li>
-        <li>the component will render *ngrxViewError. (error screen)</li>
+        <li>the component will render <b>*ngrxViewError</b>. (error screen)</li>
       </ul>
       </li>
     <li>
-    if api call fails, it emits GET_USER_RESOLVED
+    if api call fails, it emits <b>GET_USER_RESOLVED</b>
     <ul>
         <li>which will set the state in store to 'RESOLVED'</li>
-        <li>the component will render *ngrxViewResolved. (appropriate UI for user data)</li>
+        <li>the component will render <b>*ngrxViewResolved</b>. (appropriate UI for user data)</li>
       </ul>
       </li>
   </ul>
