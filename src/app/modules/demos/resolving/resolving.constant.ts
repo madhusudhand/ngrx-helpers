@@ -1,20 +1,32 @@
+export const HTML_CODE = `
+<div
+    [ngrxView]="userInfo.state"
+    class="full-height">
+    <div
+      *ngrxViewResolving
+      class="full-height">
+      <div class="d-flex justify-content-center align-items-center full-height">
+        <div
+          class="spinner-border"
+          role="status">
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+
+export const TS_CODE = `
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { APP_ACTIONS } from '../../../_store/actions';
-import { NgrxStoreSubscription, DATA_STATE } from 'ngrx-helpers';
-import { HTML_CODE, TS_CODE } from './resolving.constant';
+import { NgrxStoreSubscription } from 'ngrx-helpers';
 @Component({
   selector: 'app-resolving',
   templateUrl: './resolving.component.html',
   styleUrls: ['./resolving.component.scss']
 })
-export class ResolvingComponent extends NgrxStoreSubscription implements OnInit {
-  userInfo: any;
-  demoCode = {
-    HTML: HTML_CODE,
-    TS: TS_CODE
-  };
-
+export class ResolvingComponent  extends NgrxStoreSubscription implements OnInit {
+  userInfo = {};
   constructor(
     private store: Store<any>,
   ) {
@@ -27,8 +39,7 @@ export class ResolvingComponent extends NgrxStoreSubscription implements OnInit 
       reducer: 'USER_REDUCER',
       state: 'userInfo',
     }).subscribe((data) => {
-      this.userInfo = Object.assign({}, data);
-      this.userInfo.state = DATA_STATE.RESOLVING;
+      this.userInfo = data;
     });
 
     this.store.dispatch({
@@ -41,3 +52,4 @@ export class ResolvingComponent extends NgrxStoreSubscription implements OnInit 
   }
 
 }
+`;

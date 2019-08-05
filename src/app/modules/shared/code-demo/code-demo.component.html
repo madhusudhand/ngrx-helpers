@@ -1,0 +1,25 @@
+<div class="card text-center">
+    <div class="card-header d-flex">
+      <div class="col-11">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item c-pointer" *ngFor="let tab of tabs" (click)="selectTab(tab)">
+          <a class="nav-link" [class.active]="tab === selectedTab">{{tab}}</a>
+        </li>
+      </ul>
+    </div>
+      <div class="col-1 d-flex align-items-center justify-content-end">
+       <span (click)="isCode = !isCode" class="c-pointer">< / ></span> 
+      </div>
+    </div>
+    <div class="card-body pt-0">
+      <div *ngIf="isCode">
+        <pre class="mt-0">
+        <app-code [highlight]="selectedTabCode"></app-code>
+      </pre>
+      </div>
+      <div class="pt-3 demo">
+          <ng-content></ng-content>
+      </div>
+      
+    </div>
+  </div>

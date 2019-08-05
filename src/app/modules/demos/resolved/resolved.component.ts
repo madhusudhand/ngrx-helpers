@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { APP_ACTIONS } from '../../../_store/actions';
 import { NgrxStoreSubscription, DATA_STATE } from 'ngrx-helpers';
-import { HTML_CODE, TS_CODE } from './resolving.constant';
+import { HTML_CODE, TS_CODE } from './resolved.constant';
+
 @Component({
-  selector: 'app-resolving',
-  templateUrl: './resolving.component.html',
-  styleUrls: ['./resolving.component.scss']
+  selector: 'app-resolved',
+  templateUrl: './resolved.component.html',
+  styleUrls: ['./resolved.component.scss']
 })
-export class ResolvingComponent extends NgrxStoreSubscription implements OnInit {
+export class ResolvedComponent extends NgrxStoreSubscription implements OnInit {
   userInfo: any;
   demoCode = {
     HTML: HTML_CODE,
@@ -28,11 +29,10 @@ export class ResolvingComponent extends NgrxStoreSubscription implements OnInit 
       state: 'userInfo',
     }).subscribe((data) => {
       this.userInfo = Object.assign({}, data);
-      this.userInfo.state = DATA_STATE.RESOLVING;
     });
 
     this.store.dispatch({
-      type: APP_ACTIONS.GET_USER_RESOLVING,
+      type: APP_ACTIONS.GET_USER,
       payload: {
         pathParams: ['octocat'],
         // queryParams: [{ name: 'value' }],

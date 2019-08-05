@@ -18,7 +18,6 @@ export class UserEffects extends NgrxEffect {
 `;
 
 export const REDUCER_CODE = `
-
 export interface UserState {
   readonly userInfo: NgrxObject<any>;
 }
@@ -45,11 +44,9 @@ export function UserReducer(state = defaultState, action) {
       return state;
   }
 }
-
 `;
 
 export const DISPATCH_ACTIONS_CODE = `
-
 this.store.dispatch({
   type: APP_ACTIONS.GET_USER,
   payload: {
@@ -57,11 +54,9 @@ this.store.dispatch({
     // queryParams: [{ name: 'value' }],
   },
 });
-
 `;
 
 export const SUBSCRIBE_STATE_CODE = `
-
 export class AppComponent extends NgrxStoreSubscription implements OnInit {
   userInfo = {};
 
@@ -81,7 +76,6 @@ export class AppComponent extends NgrxStoreSubscription implements OnInit {
     // refer to the example app to know how reducers registered for a feature
   }
 }
-
 `;
 
 export const MANAGE_TEMPLATE_CODE1 = `
@@ -92,7 +86,6 @@ export const MANAGE_TEMPLATE_CODE1 = `
 `;
 
 export const MANAGE_TEMPLATE_CODE2 = `
-
 <div [ngrxView]="userInfo.state">
   <div *ngrxViewResolving>Loading...</div>
   <div *ngrxViewError>Error fetching user info</div>
@@ -100,5 +93,4 @@ export const MANAGE_TEMPLATE_CODE2 = `
     {{userInfo.data | json}}
   </div>
 </div>
-
 `;

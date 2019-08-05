@@ -1,22 +1,7 @@
 <app-header [menuItems]="menu"></app-header>
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="content">
+  <router-outlet></router-outlet>
 </div>
-
-<h4>Github user (octocat) info</h4>
-
-<div [ngrxView]="userInfo.state">
-  <div *ngrxViewResolving>
-    Loading user data...
-  </div>
-  <div *ngrxViewError>
-    Error fetching user info
-  </div>
-  <div *ngrxViewResolved>
-    <pre>{{userInfo.data | json}}</pre>
-  </div>
-</div> -->
-<router-outlet></router-outlet>
+<footer class="mt-5 d-flex align-items-center">
+  <div class="ml-3"><span class="copyleft mt-1">&copy;</span>copyleft : MIT Lisence</div>
+</footer>

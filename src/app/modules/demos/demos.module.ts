@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 import { DemosComponent } from './demos.component';
 import { ResolvingComponent } from './resolving/resolving.component';
-import { CodeDemoComponent } from './code-demo/code-demo.component';
+import { NgrxHelperModule } from 'ngrx-helpers';
+import { ErrorComponent } from './error/error.component';
+import { ResolvedComponent } from './resolved/resolved.component';
+
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    NgrxHelperModule.forRoot()
   ],
-  declarations: [DemosComponent, ResolvingComponent, CodeDemoComponent]
+  declarations: [DemosComponent, ResolvingComponent, ErrorComponent, ResolvedComponent],
 })
 export class DemosModule { }

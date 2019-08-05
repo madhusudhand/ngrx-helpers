@@ -1,0 +1,20 @@
+app-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.content {
+    margin-top: 7rem;
+}
+
+footer {
+    height: 50px;
+    background-color: #eaeaea;
+}
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+}

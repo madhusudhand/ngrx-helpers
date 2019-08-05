@@ -1,0 +1,43 @@
+<app-code-demo [demoCode]="demoCode">
+  <div
+    [ngrxView]="userInfo.state"
+    class="full-height">
+    <div
+      *ngrxViewResolving
+      class="full-height">
+      <div class="d-flex justify-content-center align-items-center full-height">
+        <div
+          class="spinner-border"
+          role="status">
+        </div>
+      </div>
+    </div>
+    <div
+      *ngrxViewResolved
+      class="full-height">
+      <div class="d-flex justify-content-center align-items-center full-height">
+        <div
+          class="card"
+          style="width: 20rem;">
+          <div class="card-body">
+            <h3 class="card-title">GitHu Repo Info</h3>
+            <div class="card-text">
+              <div>Username: {{userInfo.data.name}}</div>
+              <div>Followers: {{userInfo.data.followers}}</div>
+              <div>Following: {{userInfo.data.following}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      *ngrxViewError
+      class="full-height d-flex align-items-center justify-content-center">
+      <div
+        class="alert alert-danger"
+        role="alert">
+        Error fetching user info
+      </div>
+    </div>
+  </div>
+</app-code-demo>
