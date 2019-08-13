@@ -1,0 +1,16 @@
+<app-code-demo [demoCode]="demoCode">
+  <div
+    [ngrxView]="userInfo.state"
+    class="full-height">
+    <div
+      *ngrxViewResolving
+      class="full-height">
+      <div class="d-flex justify-content-center align-items-center full-height">
+        <div
+          class="spinner-border"
+          role="status">
+        </div>
+      </div>
+    </div>
+  </div>
+</app-code-demo>

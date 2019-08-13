@@ -1,0 +1,25 @@
+<div class="card text-center">
+    <div class="card-header d-flex">
+      <div class="col-9">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item c-pointer" (click)="selectTab('PREVIEW')">
+            <a class="nav-link" [class.active]="selectedTab === 'PREVIEW'"> PREVIEW </a>
+        </li>
+        <li class="nav-item c-pointer" *ngFor="let tab of tabs" (click)="selectTab(tab)">
+          <a class="nav-link" [class.active]="tab === selectedTab">{{tab}}</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div class="card-body pt-0">
+      <ng-template #code1>
+        <pre class="mt-0">
+        <app-code [highlight]="selectedTabCode"></app-code>
+      </pre>
+      </ng-template>
+      <div class="pt-3 demo" *ngIf="selectedTab === 'PREVIEW'; else code1">
+          <ng-content></ng-content>
+      </div>
+      
+    </div>
+  </div>

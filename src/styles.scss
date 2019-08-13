@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~highlight.js/styles/github.css';
+@import "~bootstrap/scss/vendor/rfs";
+@import "styles/variables"; 
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/utilities/spacing";
+@import "~bootstrap/scss/utilities/sizing";
+
+@import "~bootstrap/scss/mixins/box-shadow";
+@import "~bootstrap/scss/mixins/hover";
+@import "~bootstrap/scss/mixins/border-radius";
+@import "~bootstrap/scss/mixins/background-variant";
+@import "~bootstrap/scss/mixins/size";
+@import "~bootstrap/scss/mixins/alert";
+@import "~bootstrap/scss/mixins/gradients";
+@import "~bootstrap/scss/mixins/transition";
+@import "~bootstrap/scss/utilities/background";
+
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/transitions";
+
+
+
+@font-face {
+    font-family: noto_bold;
+    src: url(styles/fonts/NotoSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: noto_regular;
+    src: url(styles/fonts/NotoSans-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: noto_regular,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+b {
+    font-family: noto_bold;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+}

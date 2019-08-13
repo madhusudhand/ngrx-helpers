@@ -1,0 +1,67 @@
+<div class="container mt-5">
+  <div>
+    A library to simplify ngrx implementation in Angular Apps.
+  </div>
+
+  <h2><b>Getting started</b></h2>
+
+  <p>For complete reference, look at the <a href="https://github.com/madhusudhand/ngrx-helpers">Example App</a>.</p>
+
+  <h3><b>App Module configuration</b></h3>
+  <p>import <span class="highlight-text">NgrxHelperModule.forRoot()</span> in app.module along with other ngrx modules.</p>
+
+  <h3><b>Effects</b></h3>
+  <p>The helper class <span class="highlight-text">NgrxEffect</span> simplifies the effect configuration. It lets you configure effects with minimal inputs such as action, endpint and http method.</p>
+  <app-code [code]="effectsCode"></app-code>
+  <p>Every effect emits three actions (_RESOLVING, _RESOLVED, *_ERROR) as follows.</p>
+  <ul>
+    <li><b>GET_USER_RESOLVING</b>: emitted immediately when the action GET_USER dispatched which helps setting corresponding loaders.</li>
+    <li><b>GET_USER_RESOLVED</b>: emitted when api fails with 4XX or 5XX status codes.</li>
+    <li><b>GET_USER_ERROR</b>: emitted when api fails with 4XX or 5XX status codes.</li>
+  </ul>
+  <p><b>Note</b>: endpint can be configured with params which can be sent at the time of dispatching action.</p>
+
+  <h3><b>Reducer</b></h3>
+  <app-code [code]="reducerCode"></app-code>
+
+  <h3><b>Dispatch action</b></h3>
+  <app-code [code]="dispatchActionsCode"></app-code>
+
+  <h3><b>Subscribe a state</b></h3>
+  <p>Subscriptions are simplified by extending the component from the helper class <span class="highlight-text">NgrxStoreSubscription</span>.</p>
+  <app-code [code]="subscribeStateCode"></app-code>
+
+  <h3><b>Managing Template</b></h3>
+  <p>Every reducer gets resolved with data with the following format.</p>
+  <app-code [code]="manageTemplateCode1"></app-code>
+  <p>This format helps us set the appropriate view in the component template.</p>
+  <app-code [code]="manageTemplateCode2"></app-code>
+  <p>with the help of directives, component automatically responds based on the state from the store.</p>
+  <h3><b>Summary</b></h3>
+  <p>When the action <i>GET_USER</i> gets dispatched</p>
+  <ul class="summary-list">
+    <li>it emits <b>GET_USER_RESOLVING</b>
+      
+      <ul>
+        <li>which will set the state in store to 'RESOLVING'</li>
+        <li>the component will render <b>*ngrxViewResolving</b>. (a loader screen)</li>
+      </ul>
+      </li>
+    <li>
+    if api call fails, it emits <b>GET_USER_ERROR</b>
+      
+      <ul>
+        <li>which will set the state in store to 'ERROR'</li>
+        <li>the component will render <b>*ngrxViewError</b>. (error screen)</li>
+      </ul>
+      </li>
+    <li>
+    if api call fails, it emits <b>GET_USER_RESOLVED</b>
+    <ul>
+        <li>which will set the state in store to 'RESOLVED'</li>
+        <li>the component will render <b>*ngrxViewResolved</b>. (appropriate UI for user data)</li>
+      </ul>
+      </li>
+  </ul>
+
+</div>
