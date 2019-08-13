@@ -4,7 +4,7 @@ A library to simplify ngrx implementation in Angular Apps.
 
 ## Getting started
 
-For complete reference, look at the [Example App](https://github.com/madhusudhand/ngrx-helpers).
+For complete reference, look at the [Git Repo](https://github.com/madhusudhand/ngrx-helpers).
 
 ### App Module configuration
 
