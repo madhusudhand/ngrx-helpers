@@ -21,6 +21,9 @@
       "ngrx-helpers": [
         "dist/ngrx-helpers"
       ],
+      "core-js/es7/reflect": [
+        "node_modules/core-js/proposals/reflect-metadata"
+      ],
       "ngrx-helpers/*": [
         "dist/ngrx-helpers/*"
       ]

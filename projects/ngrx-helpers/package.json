@@ -19,11 +19,11 @@
     "rxjs"
   ],
   "peerDependencies": {
-    "@ngrx/effects": "^6.1.0",
-    "@ngrx/store": "^6.1.0",
-    "rxjs": "^6.3.0"
+    "@ngrx/effects": "^8.2.0",
+    "@ngrx/store": "^8.2.0",
+    "rxjs": "^6.5.2"
   },
   "dependencies": {
-    "lodash.clonedeep": "~4.5.0"
+    "lodash.clonedeep": "~4.17.15"
   }
 }

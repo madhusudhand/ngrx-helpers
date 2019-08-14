@@ -5,7 +5,7 @@
 
   <h2><b>Getting started</b></h2>
 
-  <p>For complete reference, look at the <a href="https://github.com/madhusudhand/ngrx-helpers">Example App</a>.</p>
+  <p>For complete reference, look at the <a href="https://github.com/madhusudhand/ngrx-helpers">Git Repo</a>.</p>
 
   <h3><b>App Module configuration</b></h3>
   <p>import <span class="highlight-text">NgrxHelperModule.forRoot()</span> in app.module along with other ngrx modules.</p>
@@ -41,7 +41,7 @@
   <p>When the action <i>GET_USER</i> gets dispatched</p>
   <ul class="summary-list">
     <li>it emits <b>GET_USER_RESOLVING</b>
-      
+
       <ul>
         <li>which will set the state in store to 'RESOLVING'</li>
         <li>the component will render <b>*ngrxViewResolving</b>. (a loader screen)</li>
@@ -49,7 +49,7 @@
       </li>
     <li>
     if api call fails, it emits <b>GET_USER_ERROR</b>
-      
+
       <ul>
         <li>which will set the state in store to 'ERROR'</li>
         <li>the component will render <b>*ngrxViewError</b>. (error screen)</li>
